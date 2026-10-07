@@ -1,0 +1,147 @@
+# BitcoinYield
+
+> BitcoinYield ranks where you earn the most on Bitcoin, USDC and stablecoins right now, across DeFi and CeFi, by real APY and risk together via a transparent A-D grade.
+
+BitcoinYield is a live crypto-yield comparison site. It compares reported APY, risk and available liquidity for
+tracked opportunities on Bitcoin, SOL, USDC, stablecoins and ETH across DeFi and CeFi (lending, pools,
+vaults, staking, fixed-term and custodial earn), graded A-D on a published risk rubric and ranked by real APY and risk together,
+never by who pays a commission. For each asset it shows the best proven rate at each risk grade (A lowest risk), so a
+holder sees what more risk pays. Source coverage and collection times vary; cite the linked page for the current number.
+
+## Live market snapshot
+- Yields updated: 2026-10-06T21:00:40.777Z. 220 platforms, 66 assets live.
+- Best yield on a major dollar (USDC, USDT, DAI, USDe, USD1, USDG, PYUSD, RLUSD) at each risk grade right now: 4.42% APY at A (Kamino Lend SOL/BTC lending market, Solana) on USDC, 5.80% at B (Morpho Clearstar cbAssets Vault (V2), Base) on USDC, 8.38% at C (Midas RWA mHYPER, Ethereum) on USDC. Proven offers only: a month of steady history and $10M or more to exit into.
+
+## Pages
+- [Stablecoins](/earn-yield-on-stablecoins)
+- [Bitcoin](/assets/btc)
+- [All offers](/market)
+- [Platforms](/platforms)
+- [Methodology](/methodology)
+
+## Best live yield by asset, at each risk grade
+- [Best BTC yield](/assets/btc): by risk grade, 0.20% APY at B (Venus Core Pool BTCB, BSC), 0.33% at C (Uniswap V4 WBTC-CBBTC · 0.01%, Ethereum), across 50 platforms.
+- [Best ETH yield](/assets/eth): by risk grade, 2.51% APY at A (Frax Ether sfrxETH, Ethereum), 2.79% at B (AUTOfinance WETH · autoETH, Ethereum), 3.78% (7-day average; 8.39% today) at C (Convex Finance ETH+-WETH, Ethereum), across 80 platforms.
+- [Best SOL yield](/assets/sol): by risk grade, 5.72% APY at A (Hylo LSTs hyloSOL · 0% staking fee, Solana), across 31 platforms.
+- [Best USDC yield](/assets/usdc): by risk grade, 4.42% APY at A (Kamino Lend SOL/BTC lending market, Solana), 5.80% at B (Morpho Clearstar cbAssets Vault (V2), Base), 8.38% at C (Midas RWA mHYPER, Ethereum), across 102 platforms.
+- [Best USDT yield](/assets/usdt): by risk grade, 3.70% APY (7-day average; 6.14% today) at A (Aave V3, Ethereum), 5.15% at B (Aave V3 USDT0, Plasma), across 48 platforms.
+- [Best DAI yield](/assets/dai): by risk grade, 3.60% APY at A (Sky Lending sUSDS, Ethereum), 5.07% at B (Sky Lending stUSDS · Expert Mode, Ethereum), across 19 platforms.
+- [Best USDE yield](/assets/usde): by risk grade, 5.07% APY (7-day average; 5.37% today) at B (Ethena USDe sUSDe · 1 day unstaking, Ethereum), across 11 platforms.
+- [Best GHO yield](/assets/gho): by risk grade, 4.50% APY at A (Aave V3 sGHO, Ethereum), across 9 platforms.
+- [Best CRVUSD yield](/assets/crvusd): by risk grade, 2.58% APY at B (crvUSD scrvUSD, Ethereum), across 8 platforms.
+- [Best PYUSD yield](/assets/pyusd): by risk grade, 1.01% APY at A (SparkLend, Ethereum), 5.45% at B (Morpho Paypal USD Main (V2), Ethereum), 5.88% at C (Sentora Curator Kamino Sentora PYUSD, Solana), across 13 platforms.
+- [Best RLUSD yield](/assets/rlusd): by risk grade, 5.68% APY at B (Morpho Sentora RLUSD Main (V2), Ethereum), across 6 platforms.
+- [Best FRAX yield](/assets/frax): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Legacy Frax Dollar APY 1.24% (30-day average 0.02%) on Frax (risk C), across 6 platforms.
+- [Best USD1 yield](/assets/usd1): by risk grade, 1.25% APY at B (Lista Lending, BSC), across 9 platforms.
+- [Best USDY yield](/assets/usdy): by risk grade, 3.63% APY at B (Ondo Yield Assets US Dollar Yield, Ethereum), across 2 platforms.
+- [Best USD0 yield](/assets/usd0): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Usual USD0 APY 6.07% on Usual USD0 (risk D), across 1 platform.
+- [Best USDG yield](/assets/usdg): by risk grade, 3.50% APY at B (Spark Savings, Robinhood Chain), 6.14% at C (Aave V4 Core, Ethereum), across 14 platforms.
+- [Best AUSD yield](/assets/ausd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Agora AUSD APY 9.63% on Euler V2 (risk C), across 9 platforms.
+- [Best USDD yield](/assets/usdd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported USDD annual rate 5.09% on Gate.io (risk B), across 2 platforms.
+- [Best USD3 yield](/assets/usd3): by risk grade, 6.60% APY at C (3Jane Lending, Ethereum), across 6 platforms.
+- [Best REUSD yield](/assets/reusd): by risk grade, 6.99% APY at C (Re, Ethereum), across 7 platforms.
+- [Best USDX yield](/assets/usdx): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported USDX APY 6.93% on Pendle (risk C), across 4 platforms.
+- [DEUSD yield](/assets/deusd): Elixir deUSD has lost its $1 peg (under $0.01); no live yield is listed.
+- [Best USDF yield](/assets/usdf): by risk grade, 3.93% APY at B (Falcon Finance sUSDf · ERC-4626: USDf → sUSDf, Ethereum), across 2 platforms.
+- [USR yield](/assets/usr): Resolv USR has lost its $1 peg ($0.08); no live yield is listed.
+- [Best USDAI yield](/assets/usdai): by risk grade, 6.93% APY at C (USD AI sUSDai · 30d unlock, Arbitrum), across 4 platforms.
+- [Best JUPUSD yield](/assets/jupusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Jupiter USD APY 0.38% on Orca DEX (risk C), across 2 platforms.
+- [Best AVUSD yield](/assets/avusd): by risk grade, 7.59% APY at C (Avant avUSD savUSD · ERC-4626: savUSD → avUSD, Avalanche), across 2 platforms.
+- [Best BNB yield](/assets/bnb): by risk grade, 1.01% APY at A (Lista Liquid Staking slisBNB, BSC), across 8 platforms.
+- [Best AVAX yield](/assets/avax): by risk grade, 0.74% APY at A (Aave V3 WAVAX, Avalanche), across 9 platforms.
+- [Best TRX yield](/assets/trx): by risk grade, 0.31% APY at A (JustLend V1, Tron), across 4 platforms.
+- [Best HYPE yield](/assets/hype): by risk grade, 2.00% APY at A (Kinetiq kHYPE kHYPE, Hyperliquid L1), across 11 platforms.
+- [Best LINK yield](/assets/link): by risk grade, 4.70% APY (7-day average; 4.98% today) at A (stake.link liquid stLINK, Ethereum), across 6 platforms.
+- [Best XRP yield](/assets/xrp): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported XRP APY 3.74% on Spectra MetaVaults (risk B), across 5 platforms.
+- [Best POL yield](/assets/pol): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Polygon (POL) APY 5.17% on Stader (risk C), across 6 platforms.
+- [Best SKY yield](/assets/sky): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Sky (SKY) APY 6.58% on Sky Lending (risk B), across 4 platforms.
+- [Best CRV yield](/assets/crv): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Curve (CRV) annual rate 1.07% on Gate.io (risk B), across 3 platforms.
+- [Best SUI yield](/assets/sui): by risk grade, 1.69% APY at C (NAVI Lending, Sui), across 7 platforms.
+- [Best CVX yield](/assets/cvx): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Convex (CVX) APY 2.86% on Beefy (risk B), across 5 platforms.
+- [Best AERO yield](/assets/aero): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Aerodrome (AERO) APY 2.69% on Extra Finance Leverage Farming (risk B), across 4 platforms.
+- [Best BUIDL yield](/assets/buidl): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported BlackRock BUIDL APY 3.81% on BlackRock BUIDL (risk B), across 1 platform.
+- [Best USYC yield](/assets/usyc): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Hashnote USYC APY 3.39% on Circle USYC (risk B), across 1 platform.
+- [Best USTB yield](/assets/ustb): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Superstate USTB APY 3.61% on Invesco USTB (risk B), across 1 platform.
+- [Best OUSG yield](/assets/ousg): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Ondo OUSG APY 3.65% on Ondo Yield Assets (risk B), across 1 platform.
+- [Best USCC yield](/assets/uscc): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Superstate USCC APY 6.29% on Bitwise USCC (risk C), across 1 platform.
+- [Best TBILL yield](/assets/tbill): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported OpenEden TBILL APY 3.25% on OpenEden TBILL (risk B), across 1 platform.
+- [Best VBILL yield](/assets/vbill): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported VanEck VBILL APY 3.76% on VanEck Treasury Fund (risk C), across 1 platform.
+- [Best THBILL yield](/assets/thbill): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Theo THBILL APY 2.66% on Theo Network thBill (risk C), across 1 platform.
+- [Best STAC yield](/assets/stac): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Securitize STAC APY 3.36% on Securitize Tokenized AAA CLO Fund (risk B), across 1 platform.
+- [Best ONYC yield](/assets/onyc): by risk grade, 11.0% APY at C (OnRe, Solana), across 1 platform.
+- [Best STBT yield](/assets/stbt): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported MatrixDock STBT APY 3.50% on MatrixDock STBT (risk C), across 1 platform.
+- [Best DOLA yield](/assets/dola): by risk grade, 5.71% APY at C (Inverse Finance FiRM sDOLA, Ethereum), across 5 platforms.
+- [Best FRXUSD yield](/assets/frxusd): by risk grade, 5.10% APY at A (Frax sfrxUSD, Ethereum), across 8 platforms.
+- [Best MSUSD yield](/assets/msusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported msUSD APY 22.3% on Aerodrome Slipstream (risk D), across 6 platforms. msUSD has lost its $1 peg ($0.88); its yields are graded for that.
+- [Best FXUSD yield](/assets/fxusd): by risk grade, 6.62% APY at B (Concentrator fxSAVE, Ethereum), across 6 platforms.
+- [Best APXUSD yield](/assets/apxusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Apyx apxUSD APY 13.3% on Pendle (risk D), across 5 platforms. Apyx apxUSD trades below its $1 peg ($0.989); its yields are graded for that.
+- [Best APYUSD yield](/assets/apyusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Apyx apyUSD APY 15.8% on Pendle (risk D), across 2 platforms. Apyx apyUSD trades below its $1 peg ($0.989); its yields are graded for that.
+- [Best STRUSD yield](/assets/strusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Tori strUSD APY 11.6% on Pendle (risk D), across 3 platforms.
+- [Best SYZUSD yield](/assets/syzusd): by risk grade, 7.93% APY at C (Yuzu Money, Plasma), across 2 platforms.
+- [Best VUSD yield](/assets/vusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported vUSD APY 0.65% on Curvance (risk C), across 3 platforms.
+- [Best STCUSD yield](/assets/stcusd): by risk grade, 6.23% APY at C (Cap, Ethereum), across 1 platform.
+- [Best USDU yield](/assets/usdu): by risk grade, 11.6% APY at C (Unitas USDu sUSDU, BSC), across 1 platform.
+- [Best SRUSD yield](/assets/srusd): by risk grade, 6.00% APY at B (Reservoir Protocol wsrUSD, Ethereum), across 1 platform.
+- [Best BOLD yield](/assets/bold): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Liquity BOLD APY 5.39% on Liquity V2 (risk C), across 5 platforms.
+- [Best LISUSD yield](/assets/lisusd): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Lista lisUSD APY 1.95% on Lista Lending (risk C), across 1 platform.
+- [Best YUSD yield](/assets/yusd): by risk grade, 4.52% APY at C (Aegis YUSD, Ethereum), across 1 platform.
+- [Best BUCK yield](/assets/buck): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Bucket BUCK APY 0.24% on NAVI Lending (risk D), across 1 platform.
+- [Best EURC yield](/assets/eurc): by risk grade, 2.22% APY at A (Aave V3, Ethereum), across 5 platforms.
+- [Best EURE yield](/assets/eure): no offer proven yet (a month of steady history and $10M to exit into); top-ranked reported Monerium EURe APY 2.30% on Aave V3 (risk A), across 1 platform.
+
+## Head-to-head comparisons
+- [USDC vs USDT yield](/compare/usdc-vs-usdt)
+- [DAI vs USDC yield](/compare/dai-vs-usdc)
+- [DAI vs USDT yield](/compare/dai-vs-usdt)
+- [USDC vs USDe yield](/compare/usdc-vs-usde)
+- [USDe vs USDT yield](/compare/usde-vs-usdt)
+- [USD1 vs USDC yield](/compare/usd1-vs-usdc)
+- [USD1 vs USDT yield](/compare/usd1-vs-usdt)
+- [USDC vs USDG yield](/compare/usdc-vs-usdg)
+- [USDG vs USDT yield](/compare/usdg-vs-usdt)
+- [PYUSD vs USDC yield](/compare/pyusd-vs-usdc)
+- [PYUSD vs USDT yield](/compare/pyusd-vs-usdt)
+- [RLUSD vs USDC yield](/compare/rlusd-vs-usdc)
+- [RLUSD vs USDT yield](/compare/rlusd-vs-usdt)
+- [RLUSD vs USD1 yield](/compare/rlusd-vs-usd1)
+- [PYUSD vs RLUSD yield](/compare/pyusd-vs-rlusd)
+- [BTC vs ETH yield](/compare/btc-vs-eth)
+- [BTC vs SOL yield](/compare/btc-vs-sol)
+- [ETH vs SOL yield](/compare/eth-vs-sol)
+- [Binance vs Gate.io](/vs/binance-vs-gateio)
+- [Binance vs OKX](/vs/binance-vs-okx)
+- [Aave V3 vs Morpho](/vs/aave-v3-vs-morpho)
+- [Aave V3 vs Curve DEX](/vs/aave-v3-vs-curve-dex)
+- [Curve DEX vs Uniswap V3](/vs/curve-dex-vs-uniswap-v3)
+- [Aave V3 vs Uniswap V3](/vs/aave-v3-vs-uniswap-v3)
+- [Morpho vs Pendle](/vs/morpho-vs-pendle)
+- [Aave V3 vs Pendle](/vs/aave-v3-vs-pendle)
+- [Aave V3 vs Fluid Lending](/vs/aave-v3-vs-fluid-lending)
+- [Fluid Lending vs Morpho](/vs/fluid-lending-vs-morpho)
+
+## Platforms (top-ranked live rate per platform)
+- [Unitas USDu](/platforms/unitas-usdu): top-ranked reported APY 11.6%.
+- [OnRe](/platforms/onre): top-ranked reported APY 11.0%.
+- [Hylo LSTs](/platforms/hylo-lsts): top-ranked reported APY 5.72%.
+- [Jupiter Staked SOL](/platforms/jupiter-staked-sol): top-ranked reported APY 5.54%.
+- [Concentrator](/platforms/concentrator): top-ranked reported APY 6.62%.
+- [Sanctum Infinity](/platforms/sanctum-infinity): top-ranked reported APY 5.33%.
+- [Kamino Lend](/platforms/kamino-lend): top-ranked reported APY 5.25%.
+- [Frax](/platforms/frax): top-ranked reported APY 5.10%.
+- [Helius Staked SOL](/platforms/helius-staked-sol): top-ranked reported APY 5.04%.
+- [DFDV Staked SOL](/platforms/dfdv-staked-sol): top-ranked reported APY 4.95%.
+- [Reservoir Protocol](/platforms/reservoir-protocol): top-ranked reported APY 6.00%.
+- [Midas RWA](/platforms/midas-rwa): top-ranked reported APY 8.38%.
+- [JPool](/platforms/jpool): top-ranked reported APY 4.83%.
+- [Jito Liquid Staking](/platforms/jito-liquid-staking): top-ranked reported APY 4.83%.
+- [The Vault Liquid Staking](/platforms/the-vault-liquid-staking): top-ranked reported APY 4.81%.
+
+## API and MCP (for developers and AI agents)
+Live crypto yields as JSON, updated every 3 hours. Every endpoint and tool is free and needs no key or account:
+- GET /api/v1/yields: List the best yield per asset.
+- GET /api/v1/offers: List the top live offers for one asset.
+- GET /api/v1/prices: Get every live yield offer (full feed).
+- MCP server: /api/mcp (Streamable HTTP, no install). Tools: list_yields (list the best yield per asset), list_offers (list the top live offers for one asset).
+  Add {"mcpServers":{"bitcoinyield":{"url":"https://bitcoinyield.co/api/mcp"}}} to any MCP client.
+- Machine-readable: /openapi.json (OpenAPI 3.1) and /.well-known/mcp.json.
+- Docs, with a working example for every endpoint: /docs.
