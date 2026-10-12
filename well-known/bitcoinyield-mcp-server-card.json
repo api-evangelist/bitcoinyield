@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "co.bitcoinyield/yields",
+  "version": "1.9.0",
+  "description": "Best live crypto yield at each A-D risk grade on BTC, ETH, SOL and stablecoins, DeFi and CeFi.",
+  "title": "BitcoinYield",
+  "websiteUrl": "https://bitcoinyield.co/docs",
+  "icons": [
+    {
+      "src": "https://bitcoinyield.co/brand/icon.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://bitcoinyield.co/api/mcp",
+      "supportedProtocolVersions": [
+        "2026-07-28",
+        "2025-11-25",
+        "2025-06-18",
+        "2025-03-26"
+      ]
+    }
+  ],
+  "url": "https://bitcoinyield.co/api/mcp",
+  "transport": "streamable-http"
+}

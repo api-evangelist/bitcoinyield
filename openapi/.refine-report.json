@@ -1,0 +1,27 @@
+{
+  "provider": "bitcoinyield",
+  "sources": [
+    "bitcoinyield-openapi.json"
+  ],
+  "outputs": [
+    "bitcoinyield-offers-api-openapi.yml",
+    "bitcoinyield-prices-api-openapi.yml",
+    "bitcoinyield-yields-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/bitcoinyield-openapi.json"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "bitcoinyield-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "bitcoinyield-openapi.json: tagged paths GET /api/v1/yields -> Yields",
+    "bitcoinyield-openapi.json: tagged paths GET /api/v1/offers -> Offers",
+    "bitcoinyield-openapi.json: tagged paths GET /api/v1/prices -> Prices",
+    "bitcoinyield-openapi.json: declared missing tag: Offers",
+    "bitcoinyield-openapi.json: declared missing tag: Prices",
+    "bitcoinyield-openapi.json: declared missing tag: Yields",
+    "apis.yml register: written (+3 apis, 3 total)"
+  ],
+  "skipped": []
+}

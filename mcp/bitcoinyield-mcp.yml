@@ -1,5 +1,22 @@
-generated: '2026-10-06'
-method: none
+generated: '2026-10-12'
+method: probed
+source: https://bitcoinyield.co/api/mcp
+status: live
+description: BitcoinYield serves a remote Model Context Protocol server for AI agents on its own host. No key, account or sign-up;
+  an anonymous tools/list returns two tools.
+servers:
+- name: bitcoinyield-yields
+  url: https://bitcoinyield.co/api/mcp
+  transport: streamable-http
+  auth: none
+  anonymous_probe:
+    request: '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+    http_status: 200
+tools:
+- name: list_yields
+- name: list_offers
 deployment:
-  mode: none
-  verified: derived
+  mode: remote
+  endpoint: https://bitcoinyield.co/api/mcp
+  auth: none
+  verified: probed

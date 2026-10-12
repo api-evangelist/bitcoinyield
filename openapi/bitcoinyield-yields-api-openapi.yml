@@ -1,0 +1,362 @@
+openapi: 3.2.0
+info:
+  title: BitcoinYield Yields API
+  description: 'Live crypto yield comparison across the whole market (DeFi and CeFi), as a free REST API and MCP server. Live crypto interest rates on Bitcoin, ETH and stablecoins compared: DeFi yield, crypto lending rates, staking and CeFi earn, each graded A to D for risk. No key or account needed.'
+  version: 1.9.0
+  license:
+    name: BitcoinYield Terms of Service
+    url: https://bitcoinyield.co/legal/terms
+servers:
+- url: https://bitcoinyield.co
+security: []
+tags:
+- name: Yields
+paths:
+  /api/v1/yields:
+    get:
+      operationId: list_yields
+      summary: List the best yield per asset
+      description: 'One entry per asset (Bitcoin, ETH, SOL, USDC, USDT and every other tracked stablecoin, tokenized Treasury and L1) with its best current yield across DeFi and CeFi under BitcoinYield''s risk-weighted ranking, its A-D risk grade, and a link to the full comparison. by_grade gives the best proven rate at grade A, B and C (A = lower risk), the tradeoff a holder chooses between: a grade is null when nothing proven at it pays materially more (at least 0.05 points and 5%) than a safer grade. best_apy and each by_grade rate are in percent, as the asset page shows them (today''s rate, or its 7-day average when that is lower), and rate_basis says whether the source quotes an APY or an APR. To answer ''what is the best yield on X'', quote by_grade, the lowest-risk grade first: best_apy is the top of the risk-weighted ranking and can be a higher-risk offer, or one closed to US residents. Set max_risk to limit every pick to offers graded at or below that letter. Rates are variable and not advice. No key required.'
+      parameters:
+      - name: asset
+        in: query
+        required: false
+        description: Filter to one asset by its symbol, e.g. BTC, USDC or USDE.
+        schema:
+          type: string
+          description: Filter to one asset by its symbol, e.g. BTC, USDC or USDE.
+          enum:
+          - BTC
+          - ETH
+          - SOL
+          - USDC
+          - USDT
+          - DAI
+          - USDE
+          - GHO
+          - CRVUSD
+          - PYUSD
+          - RLUSD
+          - FRAX
+          - USD1
+          - USDY
+          - USD0
+          - USDG
+          - AUSD
+          - USDD
+          - USD3
+          - REUSD
+          - USDX
+          - DEUSD
+          - USDF
+          - USR
+          - USDAI
+          - JUPUSD
+          - AVUSD
+          - BNB
+          - AVAX
+          - TRX
+          - HYPE
+          - LINK
+          - XRP
+          - POL
+          - SKY
+          - CRV
+          - SUI
+          - CVX
+          - AERO
+          - BUIDL
+          - USYC
+          - USTB
+          - OUSG
+          - USCC
+          - TBILL
+          - VBILL
+          - THBILL
+          - ACRED
+          - STAC
+          - ONYC
+          - STBT
+          - DOLA
+          - FRXUSD
+          - MSUSD
+          - FXUSD
+          - APXUSD
+          - APYUSD
+          - STRUSD
+          - SYZUSD
+          - VUSD
+          - STCUSD
+          - USDU
+          - SRUSD
+          - BOLD
+          - LISUSD
+          - YUSD
+          - BUCK
+          - EURC
+          - EURE
+      - name: stablecoin
+        in: query
+        required: false
+        description: Set to "true" to return only stablecoin assets.
+        schema:
+          type: string
+          description: Set to "true" to return only stablecoin assets.
+          enum:
+          - 'true'
+          - 'false'
+      - name: max_risk
+        in: query
+        required: false
+        description: 'Only consider offers graded at or below this letter: A (lower risk), B (moderate), C (elevated), D (higher).'
+        schema:
+          type: string
+          description: 'Only consider offers graded at or below this letter: A (lower risk), B (moderate), C (elevated), D (higher).'
+          enum:
+          - A
+          - B
+          - C
+          - D
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  updated_at:
+                    type:
+                    - string
+                    - 'null'
+                    description: When the feed was last refreshed (ISO 8601). It refreshes every 3 hours.
+                  stale:
+                    type: boolean
+                    description: True when part of this snapshot is over 6 hours old (a scheduled refresh was missed).
+                  partial:
+                    type: boolean
+                    description: True when a data source was missing from this snapshot.
+                  degraded_sources:
+                    type: array
+                    items:
+                      type: string
+                    description: The sources missing from this snapshot, if any.
+                  count:
+                    type: integer
+                  yields:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        asset:
+                          type: string
+                        slug:
+                          type: string
+                        best_apy:
+                          type: number
+                          description: 'The top-ranked offer''s rate in percent (5.2 means 5.2%) as its page shows it: today''s rate, or its 7-day average when that is lower. An APR when rate_basis says so; the name is kept for compatibility. The top of the risk-weighted ranking, which can be a higher-risk offer than by_grade''s grade-A step.'
+                        rate_basis:
+                          type: string
+                          enum:
+                          - apy
+                          - apr
+                          - unknown
+                          description: Whether the source reports best_apy as an APY (compounded) or an APR; unknown when it does not say.
+                        best_platform:
+                          type: string
+                        risk_tier:
+                          type:
+                          - string
+                          - 'null'
+                        stablecoin:
+                          type: boolean
+                        peg_price:
+                          type:
+                          - number
+                          - 'null'
+                          description: 'For a stablecoin: the live price of the dollar the best yield is paid in (1 = on its $1 peg). Null when unpriced or not a stablecoin.'
+                        platform_count:
+                          type: integer
+                        offer_count:
+                          type: integer
+                        url:
+                          type: string
+                          description: The full comparison for this asset on BitcoinYield.
+                        by_grade:
+                          type: object
+                          description: The best proven rate at each risk grade (a month of steady history and $10M or more to exit into). A grade is null when no proven offer of it pays materially more (at least 0.05 points and 5%) than a safer grade.
+                          properties:
+                            A:
+                              type:
+                              - object
+                              - 'null'
+                              properties:
+                                rate:
+                                  type: number
+                                  description: 'The step''s annual rate in percent as its page shows it: today''s rate, or its 7-day average when that is lower.'
+                                rate_today:
+                                  type: number
+                                  description: 'The latest reading: today''s rate, or for a vault, pool or staking token the middle of its 1-day, 7-day and 30-day realized returns. Above rate when that reading is higher than the 7-day average.'
+                                rate_rewards:
+                                  type:
+                                  - number
+                                  - 'null'
+                                  description: The part of rate paid as temporary incentive rewards, which last only while someone funds them; null when under a tenth of rate. Say it when you quote rate.
+                                rate_basis:
+                                  type: string
+                                  enum:
+                                  - apy
+                                  - apr
+                                  - unknown
+                                platform:
+                                  type: string
+                                market:
+                                  type: string
+                                  description: The vault, market or token the rate is paid in.
+                                chain:
+                                  type:
+                                  - string
+                                  - 'null'
+                                us_available:
+                                  type: string
+                                  enum:
+                                  - 'yes'
+                                  - 'no'
+                                  - unknown
+                                  description: Whether a US retail user can open it.
+                                url:
+                                  type: string
+                                  description: This grade's offers on the asset's page.
+                              required:
+                              - rate
+                              - rate_today
+                              - rate_basis
+                              - platform
+                              - market
+                              - us_available
+                              - url
+                            B:
+                              type:
+                              - object
+                              - 'null'
+                              properties:
+                                rate:
+                                  type: number
+                                  description: 'The step''s annual rate in percent as its page shows it: today''s rate, or its 7-day average when that is lower.'
+                                rate_today:
+                                  type: number
+                                  description: 'The latest reading: today''s rate, or for a vault, pool or staking token the middle of its 1-day, 7-day and 30-day realized returns. Above rate when that reading is higher than the 7-day average.'
+                                rate_rewards:
+                                  type:
+                                  - number
+                                  - 'null'
+                                  description: The part of rate paid as temporary incentive rewards, which last only while someone funds them; null when under a tenth of rate. Say it when you quote rate.
+                                rate_basis:
+                                  type: string
+                                  enum:
+                                  - apy
+                                  - apr
+                                  - unknown
+                                platform:
+                                  type: string
+                                market:
+                                  type: string
+                                  description: The vault, market or token the rate is paid in.
+                                chain:
+                                  type:
+                                  - string
+                                  - 'null'
+                                us_available:
+                                  type: string
+                                  enum:
+                                  - 'yes'
+                                  - 'no'
+                                  - unknown
+                                  description: Whether a US retail user can open it.
+                                url:
+                                  type: string
+                                  description: This grade's offers on the asset's page.
+                              required:
+                              - rate
+                              - rate_today
+                              - rate_basis
+                              - platform
+                              - market
+                              - us_available
+                              - url
+                            C:
+                              type:
+                              - object
+                              - 'null'
+                              properties:
+                                rate:
+                                  type: number
+                                  description: 'The step''s annual rate in percent as its page shows it: today''s rate, or its 7-day average when that is lower.'
+                                rate_today:
+                                  type: number
+                                  description: 'The latest reading: today''s rate, or for a vault, pool or staking token the middle of its 1-day, 7-day and 30-day realized returns. Above rate when that reading is higher than the 7-day average.'
+                                rate_rewards:
+                                  type:
+                                  - number
+                                  - 'null'
+                                  description: The part of rate paid as temporary incentive rewards, which last only while someone funds them; null when under a tenth of rate. Say it when you quote rate.
+                                rate_basis:
+                                  type: string
+                                  enum:
+                                  - apy
+                                  - apr
+                                  - unknown
+                                platform:
+                                  type: string
+                                market:
+                                  type: string
+                                  description: The vault, market or token the rate is paid in.
+                                chain:
+                                  type:
+                                  - string
+                                  - 'null'
+                                us_available:
+                                  type: string
+                                  enum:
+                                  - 'yes'
+                                  - 'no'
+                                  - unknown
+                                  description: Whether a US retail user can open it.
+                                url:
+                                  type: string
+                                  description: This grade's offers on the asset's page.
+                              required:
+                              - rate
+                              - rate_today
+                              - rate_basis
+                              - platform
+                              - market
+                              - us_available
+                              - url
+                          required:
+                          - A
+                          - B
+                          - C
+                      required:
+                      - asset
+                      - best_apy
+                      - rate_basis
+                      - best_platform
+                      - url
+                      - by_grade
+                required:
+                - count
+                - yields
+        '400':
+          description: A parameter outside its declared values
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                required:
+                - error
+      tags:
+      - Yields

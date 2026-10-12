@@ -1,10 +1,9 @@
 aid: bitcoinyield
 name: BitcoinYield
 image: https://bitcoinyield.co/opengraph-image?v=165863
-description: BitcoinYield provides live cryptocurrency yield data across approximately 220 platforms, covering assets such as BTC, ETH, SOL, and
-  various stablecoins. The service ranks yields by risk grade (A‑D) and presents them without requiring API keys, authentication, or sign‑up.
-  Updated every three hours, the API offers endpoints for current yields, methodology details, and a Managed Connectivity Platform (MCP) for bulk
-  data access. The platform aims to give developers transparent, real‑time yield information for integration into financial applications.
+description: BitcoinYield publishes live crypto yields (BTC, ETH, SOL and stablecoins) from about 220 platforms, each with an A-D risk grade,
+  refreshed every three hours. The REST API (GET /api/v1/yields, /api/v1/offers, /api/v1/prices) and a remote Model Context Protocol (MCP) server
+  for AI agents (https://bitcoinyield.co/api/mcp, tools list_yields and list_offers) need no key, account or sign-up.
 url: https://raw.githubusercontent.com/api-evangelist/bitcoinyield/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
@@ -12,7 +11,7 @@ x-tier: profiled
 x-tier-reason: enrichment pass 2026-10-06 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-06'
-modified: '2026-10-06'
+modified: '2026-10-12'
 tags:
 - Company
 - Crypto
@@ -25,6 +24,10 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: ErrorCatalog
+  url: errors/bitcoinyield-problem-types.yml
+- type: WellKnown
+  url: well-known/bitcoinyield-well-known.yml
 - type: AgenticAccess
   url: agentic-access/bitcoinyield-agentic-access.yml
 - type: Spectral
@@ -49,14 +52,41 @@ common:
   url: https://bitcoinyield.co/legal/terms
 - type: PrivacyPolicy
   url: https://bitcoinyield.co/legal/privacy
-- type: Pricing
-  url: https://bitcoinyield.co/pricing
+- type: MCPServer
+  url: mcp/bitcoinyield-mcp.yml
+- type: OpenAPI
+  url: https://bitcoinyield.co/openapi.json
 apis:
-- name: BitcoinYield API
-  description: Live crypto yield API providing yields across ~220 platforms.
+- aid: bitcoinyield:bitcoinyield-offers-api
+  name: BitcoinYield Offers API
+  description: The Offers API from BitcoinYield — 1 operation(s) for offers.
+  tags:
+  - Offers
+  properties:
+  - type: OpenAPI
+    url: openapi/bitcoinyield-offers-api-openapi.yml
   humanURL: https://bitcoinyield.co/docs
   baseURL: https://bitcoinyield.co
-  aid: bitcoinyield:bitcoinyield-api
+- aid: bitcoinyield:bitcoinyield-prices-api
+  name: BitcoinYield Prices API
+  description: The Prices API from BitcoinYield — 1 operation(s) for prices.
+  tags:
+  - Prices
+  properties:
+  - type: OpenAPI
+    url: openapi/bitcoinyield-prices-api-openapi.yml
+  humanURL: https://bitcoinyield.co/docs
+  baseURL: https://bitcoinyield.co
+- aid: bitcoinyield:bitcoinyield-yields-api
+  name: BitcoinYield Yields API
+  description: The Yields API from BitcoinYield — 1 operation(s) for yields.
+  tags:
+  - Yields
+  properties:
+  - type: OpenAPI
+    url: openapi/bitcoinyield-yields-api-openapi.yml
+  humanURL: https://bitcoinyield.co/docs
+  baseURL: https://bitcoinyield.co
 x-submission-notes: 'Live crypto yields (BTC/ETH/SOL/stablecoins) across ~220 platforms with A-D risk grades; keyless JSON. OpenAPI 3.1 /openapi.json
   (3 paths); remote MCP /api/mcp (no key; registry co.bitcoinyield/yields); llms.txt; methodology page. Operator: O-mega Enterprise, Inc. (AI
   operator on Founden.ai).'

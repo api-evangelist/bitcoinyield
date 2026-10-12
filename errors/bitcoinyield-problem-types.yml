@@ -1,0 +1,22 @@
+generated: '2026-10-12'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/bitcoinyield-offers-api-openapi.yml
+- openapi/bitcoinyield-prices-api-openapi.yml
+- openapi/bitcoinyield-yields-api-openapi.yml
+format: custom
+envelope:
+  media_type: application/json
+  schema: null
+coverage:
+  operations: 3
+  statuses_declared: 1
+problems:
+- status: 400
+  title: Bad Request
+  description: A parameter outside its declared values
+  operations: 3
+  media_types:
+  - application/json
+  schema: null
