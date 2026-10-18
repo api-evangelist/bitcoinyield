@@ -14,6 +14,11 @@ created: '2026-10-06'
 modified: '2026-10-12'
 tags:
 - Company
+- Cryptocurrency
+- Yield
+- Finance
+tags_raw:
+- Company
 - Crypto
 - Yield
 - Finance
@@ -81,6 +86,8 @@ apis:
   name: BitcoinYield Yields API
   description: The Yields API from BitcoinYield — 1 operation(s) for yields.
   tags:
+  - Yield
+  tags_raw:
   - Yields
   properties:
   - type: OpenAPI
