@@ -2,8 +2,8 @@ generated: '2026-10-12'
 method: probed
 source: https://bitcoinyield.co/api/mcp
 status: live
-description: BitcoinYield serves a remote Model Context Protocol server for AI agents on its own host. No key, account or sign-up;
-  an anonymous tools/list returns two tools.
+description: BitcoinYield serves a remote Model Context Protocol server for AI agents on its own host.
+  No key, account or sign-up; an anonymous tools/list returns two tools.
 servers:
 - name: bitcoinyield-yields
   url: https://bitcoinyield.co/api/mcp
@@ -20,3 +20,32 @@ deployment:
   endpoint: https://bitcoinyield.co/api/mcp
   auth: none
   verified: probed
+tool_quality:
+  tool_count: 2
+  tokens_total: 4729
+  tokens_per_tool_median: 2364
+  heavy_tools:
+  - name: list_yields
+    tokens: 2417
+  - name: list_offers
+    tokens: 2312
+  heavy_tool_count: 2
+  params_total: 8
+  params_undescribed: 0
+  params_described_pct: 100.0
+  tools_with_undescribed_params: 0
+  tools_annotated: 2
+  annotated_pct: 100.0
+  state_changing_unhinted: []
+  tools_missing_schema: 0
+  short_descriptions: 0
+  duplicate_descriptions: 0
+  duplicate_names: 0
+  nonportable_names: []
+  output_schema_count: 2
+  token_estimate: chars/3.6 of each compact tool definition
+  source: mcp/bitcoinyield-mcp-tools.json
+  measured: '2026-10-20'
+  scored: false
+  note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
+    from Glimind's agent-readiness audit.
