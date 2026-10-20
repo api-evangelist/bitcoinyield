@@ -14,7 +14,29 @@ servers:
     http_status: 200
 tools:
 - name: list_yields
+  description: 'One entry per asset (Bitcoin, ETH, SOL, USDC, USDT and every other tracked stablecoin,
+    tokenized Treasury and L1) with its best current yield across DeFi and CeFi under BitcoinYield''s
+    risk-weighted ranking, its A-D risk grade, and a link to the full comparison. by_grade gives the best
+    proven rate at grade A, B and C (A = lower risk), the tradeoff a holder chooses between: a grade is
+    null when nothing proven at it pays materially more (at least 0.05 points and 5%) than a safer grade.
+    best_apy and each by_grade rate are in percent, as the asset page shows them (today''s rate, or its
+    7-day average when that is lower), and rate_basis says whether the source quotes an APY or an APR.
+    To answer ''what is the best yield on X'', quote by_grade, the lowest-risk grade first: best_apy is
+    the by_grade step the risk-weighted ranking puts first and can be a higher-risk one, or one closed
+    to US residents. An asset with no proven offer has no pick: best_apy is null and no_pick_reason says
+    why its top-ranked offer is not one. Set max_risk to limit every pick to offers graded at or below
+    that letter. Rates are variable and not advice. No key required. With no asset or stablecoin filter
+    this tool answers the headline assets (BTC, ETH, SOL, USDC, USDT, DAI, USDe, USD1, USDG, PYUSD, RLUSD);
+    set all to true for every asset with a live yield.'
 - name: list_offers
+  description: 'The top live yield offers for one asset (5 by default, up to 20) in BitcoinYield''s own
+    order: rate and risk together, with offers that have a month of steady history and $10M+ of liquidity
+    first. Each offer carries its platform, chain, product type, rate (APY or APR), organic versus incentive
+    split, 30-day average, liquidity, A-D risk grade with its main reasons, US availability, investor
+    access, the platform''s own deposit link and the page to cite. Filter by chain or a risk ceiling.
+    Use it to compare options; list_yields gives one pick per asset. Rates are variable and not advice.
+    No key required. When nothing matches, the answer says why: the filters, a dollar that lost its peg,
+    or no live quote on the asset.'
 deployment:
   mode: remote
   endpoint: https://bitcoinyield.co/api/mcp
@@ -49,3 +71,4 @@ tool_quality:
   scored: false
   note: Facts from the saved tools/list capture (mcp_tool_quality.py); recorded, not scored. Checks learned
     from Glimind's agent-readiness audit.
+tools_count: 2
